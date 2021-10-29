@@ -1,4 +1,4 @@
-public class Main
+public class Main         //Moore's voting algorithm
 {
     public static int findMajority(int[] nums)
     {
@@ -25,9 +25,8 @@ public class Main
     }
     public static void main(String[] args)
     {
-        int arr[] = { 1, 2, 1, 6, 2, 3, 4,1,1};
+        int arr[] = { 1, 2, 1, 6, 2, 3, 4,1,1,1};
         int majority = findMajority(arr);
-        System.out.println(" The majority element is : "
-                + majority);
+        System.out.println(" The majority element is : " + majority);
     }
 }
