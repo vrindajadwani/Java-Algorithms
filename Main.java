@@ -1,6 +1,6 @@
 public class Main
 {
-    public static int search(int arr[], int x)
+    public static int search(int arr[], int x)              //Linear Search
     {
         int n = arr.length;
         for (int i = 0; i < n; i++)
@@ -13,7 +13,7 @@ public class Main
 
     public static void main(String args[])
     {
-        int arr[] = { 2, 3, 4, 10, 40 };
+        int arr[] = { 2, 3, 4, 10, 40,20 };
         int x = 10;
         
         int result = search(arr, x);
