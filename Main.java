@@ -1,32 +1,25 @@
-public class Main         //Moore's voting algorithm
+public class Main
 {
-    public static int findMajority(int[] nums)
+    public static int search(int arr[], int x)
     {
-        int count = 0, candidate = -1;
-        for (int index = 0; index < nums.length; index++) {
-            if (count == 0) {
-                candidate = nums[index];
-                count = 1;
-            }
-            else {
-                if (nums[index] == candidate)
-                    count++;
-                else
-                    count--;
-            }
+        int n = arr.length;
+        for (int i = 0; i < n; i++)
+        {
+            if (arr[i] == x)
+                return i;
         }
-        for (int index = 0; index < nums.length; index++) {
-            if (nums[index] == candidate)
-                count++;
-        }
-        if (count > (nums.length / 2))
-            return candidate;
         return -1;
     }
-    public static void main(String[] args)
+
+    public static void main(String args[])
     {
-        int arr[] = { 1, 2, 1, 6, 2, 3, 4,1,1,1};
-        int majority = findMajority(arr);
-        System.out.println(" The majority element is : " + majority);
+        int arr[] = { 2, 3, 4, 10, 40 };
+        int x = 10;
+        
+        int result = search(arr, x);
+        if (result == -1)
+            System.out.print("Element is not present in array");
+        else
+            System.out.print("Element is present at index " + result);
     }
 }
