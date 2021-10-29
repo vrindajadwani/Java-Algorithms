@@ -1,6 +1,6 @@
 public class Main
 {
-    public static int findMajority(int[] nums)
+    public static int findMajority(int[] nums)             //Check if occurence of element is >n/2
     {
         int count = 0, candidate = -1;
         for (int index = 0; index < nums.length; index++) {
